@@ -35,4 +35,5 @@ fi
 postgraphql \
 	-c $DB_URI \
 	-s $DB_SCHEMA \
-	-p 5000 \
+	--port 5000 \
+	--host 0.0.0.0

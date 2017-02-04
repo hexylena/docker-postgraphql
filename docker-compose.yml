@@ -2,7 +2,7 @@ postgraphql:
     #image: erasche/postgraphql
     build: .
     ports:
-        - "5000:5000"
+        - "5000"
     environment:
         #DB_DEFAULT_ROLE: postgres
         DB_GRAPHQL_PATH: "/graphql"
