@@ -1,0 +1,21 @@
+postgrest:
+    #image: erasche/postgraphql
+    build: .
+    ports:
+        - "8300:8000"
+    environment:
+        #DB_DEFAULT_ROLE: postgres
+        DB_GRAPHQL_PATH: "/graphql"
+        DB_GRAPHIQL_PATH: "/graphiql"
+        PG_SECRET: "deadbeefcafe"
+        DB_URI: "postgres://postgres:postgres@postgres:5432/postgres"
+        DB_SCHEMA: "public"
+    links:
+        - "chado:postgres"
+
+chado:
+    image: erasche/chado:1.31-jenkins97-pg9.5
+    environment:
+        INSTALL_YEAST_DATA: 1
+    volumes:
+        - "./chado:/var/lib/postgresql/data"

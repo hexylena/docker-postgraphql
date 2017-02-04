@@ -1,9 +1,8 @@
 FROM node:alpine
 MAINTAINER E Rasche <hxr@hx42.org>
 
-RUN adduser -h /graphql -D graphql
-USER graphql
-RUN cd /graphql && npm install postgraphql
+RUN npm install -g postgraphql
+USER nobody
 
 ADD run.sh /run.sh
 EXPOSE 5000
