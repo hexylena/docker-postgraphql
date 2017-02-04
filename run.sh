@@ -32,6 +32,10 @@ if [ ! -z "$DYNAMIC_JSON" ]; then
 	ARGS="$ARGS --dynamic-json"
 fi
 
+if [ ! -z "$CORS" ]; then
+	ARGS="$ARGS --cors"
+fi
+
 postgraphql \
 	-c $DB_URI \
 	-s $DB_SCHEMA \
