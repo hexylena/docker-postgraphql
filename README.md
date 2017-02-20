@@ -19,7 +19,7 @@ postgraphql:
         DB_SCHEMA: "public"
 		PGUSER: postgres
 		PGPASSWORD: postgres
-		PSHOST: postgres
+		PGHOST: postgres
 		PGDATABASE: postgres
 		PGPORT: 5432
     links:
