@@ -3,6 +3,7 @@ MAINTAINER E Rasche <hxr@hx42.org>
 
 RUN apk update && \
     apk add postgresql-client && \
+    apk add postgresql && \
     npm install -g postgraphql
 USER nobody
 
