@@ -37,7 +37,7 @@ if [ ! -z "$CORS" ]; then
 fi
 
 # Sleep up to 60 seconds waiting for DB to be ready;
-pg_isready -t 60;
+/app/wait-for-it.sh -t 60 "$PGHOST":"$PGPORT"
 
 postgraphql \
 	-c postgres://$PGUSER:$PGPASSWORD@$PGHOST:$PGPORT/$PGDATABASE \
