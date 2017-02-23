@@ -8,8 +8,12 @@ postgraphql:
         DB_GRAPHQL_PATH: "/graphql"
         DB_GRAPHIQL_PATH: "/graphiql"
         PG_SECRET: "deadbeefcafe"
-        DB_URI: "postgres://postgres:postgres@postgres:5432/postgres"
         DB_SCHEMA: "public"
+        PGUSER: postgres
+        PGPASSWORD: postgres
+        PGHOST: postgres
+        PGPORT: 5432
+        PGDATABASE: postgres
     links:
         - "chado:postgres"
 
