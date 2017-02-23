@@ -37,7 +37,9 @@ if [ ! -z "$CORS" ]; then
 fi
 
 # Sleep up to 60 seconds waiting for DB to be ready;
-pg_isready -t 60;
+while ! pg_isready -t 5; do
+	sleep 1;
+done
 
 postgraphql \
 	-c postgres://$PGUSER:$PGPASSWORD@$PGHOST:$PGPORT/$PGDATABASE \
