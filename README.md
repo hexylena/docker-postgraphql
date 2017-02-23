@@ -17,11 +17,11 @@ postgraphql:
         DB_GRAPHIQL_PATH: "/graphiql"
         PG_SECRET: "deadbeefcafe"
         DB_SCHEMA: "public"
-		PGUSER: postgres
-		PGPASSWORD: postgres
-		PGHOST: postgres
-		PGDATABASE: postgres
-		PGPORT: 5432
+        PGUSER: postgres
+        PGPASSWORD: postgres
+        PGHOST: postgres
+        PGDATABASE: postgres
+        PGPORT: 5432
     links:
         - "your_postgres_container:postgres"
 ```
