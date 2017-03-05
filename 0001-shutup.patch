@@ -1,0 +1,26 @@
+From 018b63dc0c3213460329f0c99b5ca6ba2437df17 Mon Sep 17 00:00:00 2001
+From: Eric Rasche <rasche.eric@gmail.com>
+Date: Wed, 1 Mar 2017 18:58:37 +0000
+Subject: [PATCH] shutup
+
+---
+ src/graphql/utils/buildObject.ts | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/graphql/utils/buildObject.ts b/src/graphql/utils/buildObject.ts
+index b8475bb..4e22157 100644
+--- a/src/graphql/utils/buildObject.ts
++++ b/src/graphql/utils/buildObject.ts
+@@ -51,7 +51,8 @@ export default function buildObject <T>(
+     }
+ 
+     if (object.hasOwnProperty(key))
+-      throw new Error(`Naming conflict when building object. Cannot have two definitions for property '${key}'.`)
++      return
++      //throw new Error(`Naming conflict when building object. Cannot have two definitions for property '${key}'.`)
+ 
+     object[key] = value
+   }))
+-- 
+2.7.4
+

@@ -1,0 +1,4 @@
+190c190
+<     (0, _invariant2.default)(map[type.name] === type, 'Schema must contain unique named types but contains multiple ' + ('types named "' + type.name + '".'));
+---
+>     //(0, _invariant2.default)(map[type.name] === type, 'Schema must contain unique named types but contains multiple ' + ('types named "' + type.name + '".'));
